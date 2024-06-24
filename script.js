@@ -1,4 +1,8 @@
 
+    
+    
+    
+    
     // Lấy thông tin sản phẩm từ URL
     const urlParams = new URLSearchParams(window.location.search);
     const productId = urlParams.get('product');
@@ -114,4 +118,6 @@
     document.getElementById('productName').textContent = productName;
     document.getElementById('productDescription').textContent = productDescription;
     document.getElementById('productPrice').textContent = productPrice;
+
+
   

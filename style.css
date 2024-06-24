@@ -43,11 +43,52 @@
 }
 /* Anh bia trang */
 .main{
-    background: url(/images/Mercedes-Benz1.jpg);/*Add image */
-    background-size: cover;
-    height: 100vh;
-    background-position: 50% 50%;
+    /* background: url(/images/Mercedes-Benz1.jpg);
+    background: url(/images/showroom-oto.jpg); */
+    padding: 2rem;
+}
+/* Slide */
+.slider-wrapper{
+    position: relative;
+    max-width: 200rem;
+    margin:0 auto;
+}
+.slider{
+    display: flex;
+    aspect-ratio: 16/9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem ;
     width: 100%;
+}
+.slider img{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+.slider-nav{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+
+.slider-nav a{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+.slider-nav a:hover{
+    opacity: 1;
 }
 .main h1{
     font-size: 4rem;
@@ -79,6 +120,7 @@ h1{
 }
 .apple{
     background:url(/images/Mercedes-Benz1.jpg) no-repeat;
+    
     background-size: cover;
     height:120vh;
     width: 100%;
@@ -105,5 +147,38 @@ h1{
 .icon-container{
     display: flex;
     flex-direction: row;
+}
+.slide__body .container .container_slide{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 30px 0;
+}
+.slide__body .container .container_slide .slides{
+    width: 100%;
+    display: flex;
+}
+.slide__body .container .container_slide .slides .item{
+    min-width: 100%;
+}
+.slide__body .container .container_slide .slides .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slide__body .container .container_slide .next,.prev{
+    position: absolute;
+    top: 50%;
+    padding: 10px 15px;
+    background: #000;
+    color: #fff;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.slide__body .container .container_slide .next:hover,.prev:hover{
+    background: saddlebrown;
+}
+.slide__body .container .container_slide .next{
+    right: 0;
 }
 
